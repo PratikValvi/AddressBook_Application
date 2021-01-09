@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/form.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <title>Address Book Form</title>
+  <script defer src="../js/form.js"></script>
+</head>
+
+<body>
+  <header class="header-content header">
+    <div class="logo-content">
+      <img src="../assets/address-book.svg" alt="" height="100px" width="40px">
+      <div>
+        <span class="emp-text">ADDRESSBOOK</span><br>
+        <span class="emp-text emp-payroll">APPLICATION</span>
+      </div>
+    </div>
+  </header>
+  <div class="form-content">
+    <form class="form" action="#" onsubmit="save(event)" onsubmit="reset()" >
+      <div class="form-head">
+        Person Details Form
+      </div>
+      <div class="row-content">
+        <label class="label text" for="name">Name</label>
+        <input class="input" type="text" id="name" name="name" placeholder="Your name..." required>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="address">Address</label>
+        <textarea id="address" class="input" name="address" placeholder="" style="height: 100px"></textarea>
+      </div>
+      <div class="row-content">
+        <label class="label text" for="address-details"></label>
+        <div class= "address-details">
+        <div>
+          <select id="city" name="city">
+            <option value="0">Select City</option>
+            <option value="1">Satara</option>
+            <option value="2">Pune</option>
+            <option value="3">Surat</option>
+          </select>
+        </div>
+        <div>
+          <select id="state" name="state">
+            <option value="0">Select State</option>
+            <option value="1">Maharashtra</option>
+            <option value="2">Gujrat</option>
+          </select>
+        </div>
+        <div class="zipcode">
+            <input class="input2" type="text" id="zipcode" name="zipcode" placeholder="Zip Code" required>
+        </div>
+        </div>
+      </div>
+      <!---
+      <div class="row-content">
+        <label class="label text" for="zipcode">Zip Code</label>
+        <input class="input" type="text" id="zipcode" name="zipcode" placeholder="" required>
+      </div> -->
+      <div class="row-content">
+        <label class="label text" for="number">Phone Number</label> 
+        <input class="input" type="tel" id="number" name="number" placeholder="" >
+      </div> 
+      <div class="buttonParent">
+        <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
+        <div class="submit-reset">
+          <button type="submit" class="button submitButton" id="submitButton">Add</button>
+          <button type="reset" class="resetButton button">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
