@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <title>Address Book Form</title>
+  <script defer src="../js/Person.js"></script>
   <script defer src="../js/form.js"></script>
 </head>
 
@@ -22,7 +23,7 @@
     </div>
   </header>
   <div class="form-content">
-    <form class="form" action="#" onsubmit="save(event)" onsubmit="reset()" >
+    <form class="form" action="#" onreset="resetForm()" onsubmit="save(event)">
       <div class="form-head">
         Person Details Form
       </div>
