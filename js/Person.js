@@ -18,6 +18,14 @@ class Person {
     this._address = address;
   }
 
+  get phoneNumber() { return this._phoneNumber; } 
+  set phoneNumber(phoneNumber) { 
+    let phoneNumberRegex = RegExp('((91){1})[ ]([98765]{1})([0-9]{9})$'); 
+    if(phoneNumberRegex.test(phoneNumber)) 
+      this._phoneNumber = this.phoneNumber; 
+    else throw 'Phone Number is Incorrect !'; 
+  }
+
   toString() {
     return "Name= " + this.name + 
     "Address= " + this.address +
